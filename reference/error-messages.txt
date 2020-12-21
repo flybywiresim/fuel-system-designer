@@ -1,0 +1,51 @@
+[FuelSystem]Could not match Fuel defined Engine #%i (%s) to any of plane's engine. Id is likely wrong. Ignoring.
+# [FuelSystem]Could not match Fuel defined Pump #%i of type Engine-Driven (%s) to any of plane's engine. Index is likely wrong. Ignoring.
+# [FuelSystem]Could not match Fuel defined Pump #%i of type APU-Driven (%s) to an APU on this plane. Ignoring.
+# [FuelSystem]Could not create Pump #%i of type Electrical (%s) as the plane's Electrical System doesn't support circuits. Ignoring.
+# [FuelSystem]Could not create Pump #%i of type Electrical (%s) as the plane's Electrical System doesn't have a circuit at Index %i. Ignoring.
+# [FuelSystem]Could not create Pump #%i of type Anemometer (%s) as the plane does not have an Anemometer at this index. Ignoring.
+[FuelSystem]Unable to get valid component for Fuel Line #%i. Ignoring.
+[FuelSystem]Could not set source connection for Fuel Line #%i (Connected to Component %s). Ignoring.
+[FuelSystem]Could not set destination connection for Fuel Line #%i (Connected to Component %s). Ignoring.
+[FuelSystem]Could not set junction option towards Fuel Line %s (For junction %s). Ignoring.
+[FuelSystem]Could not initialize trigger %i : Expected %i targets, got %i. Ignoring.
+[FuelSystem]Could not find Component %s. Ignoring.
+[FuelSystem]Attempting to access Engine which is not accessible from the FuelSystem.
+[FuelSystem]Attempting to access pump with an invalid ID : (Is %i, should be 1 to %i)
+[FuelSystem]Attempting to access valve with an invalid ID : (Is %i, should be 1 to %i)
+[FuelSystem]Attempting to access junction with an invalid ID : (Is %i, should be 1 to %i)
+[FuelSystem]Attempting to access tank with an invalid ID : (Is %i, should be 1 to %i)
+[FuelSystem]Attempting to access line with an invalid ID : (Is %i, should be 1 to %i)
+[FuelSystem]Attempting to access trigger with an invalid ID : (Is %i, should be 1 to %i)
+[FuelSystem]Attempting to set value of non-manual trigger : %i Valve Junction Pump DefaultTank auto xfeed crossfeed xfer transfer jettison FUEL_SYSTEM Name: #Title: #Index:%i #FuelBurnRate:%.1f #Capacity:%.0f #UnusableCapacity:%.0f #Priority:%i #Position:%.1f,%.1f,%.1f #InputOnlyLines: #OutputOnlyLines: #DropTimer:%.1f #Option: #Source: #Destination: #FuelFlowAt1PSI:%.1f #Volume:%.1f #GravityBasedFuelFlow:%.1f #DestinationLine: #OpeningTime:%.1f #Circuit:%i #Pressure:%.0f #Type:Electric #Type:Anemometer #Type:APUDriven #Type:EngineDriven #Type:Manual #Index: #AutoCondition: .%.3f CloseValve. OpenValve. StartPump. StopPump. SetJunction. StartTrigger. StopTrigger. #Condition:TankQuantityBelow #Condition:TankQuantityAbove #Condition:Autostart_Enabled #Condition:Autoshutdown_Enabled #Condition:Manual #Condition:TankImbalanceAbove #Condition:TankImbalanceBelow Target: #Threshold:%.1f #EffectTrue: #EffectFalse: #DelayTrue:%i #DelayFalse:%i
+[FuelSystem]Engine %i does not have a valid source line.
+[FuelSystem]Tank %i does not have a valid destination line.
+[FuelSystem]Pump %i does not have a valid destination line.
+[FuelSystem]Pump %i does not have a valid source line.
+[FuelSystem]Valve %i does not have a valid source line.
+[FuelSystem]Junction %i has a line defined as both an input only and output only line.
+[FuelSystem]Junction %i should have at least one outgoing Line.
+[FuelSystem]Junction %i should have at least one incoming Line.
+# [FuelSystem]Incorrect number of parameters found while Loading APU #%i. Expected 2 (Name, FuelBurnRate), got %i FuelBurnRate
+# [FuelSystem]Incorrect number of parameters found while Loading Engine #%i. Expected 2 (Name, Index), got %i
+[FuelSystem]Invalid Engine ID for Engine #%i (%s). Ignoring.
+# [FuelSystem]Incorrect number of parameters found while Loading Tank #%i. Expected 4 to 8 (Name, Capacity, UnusableCapacity, Position(Longitudinal, Lateral, Vertical), [Priority], [InputOnlyLines], [OutputOnlyLines], [DropTimer]), got %i UnusableCapacity
+[FuelSystem]Invalid position for Tank #%i (%s) : %s. Ignoring. InputOnlyLines OutputOnlyLines DropTimer
+[FuelSystem]Invalid capacity for Tank #%i (%s) : %.2f. Ignoring.
+# [FuelSystem]Incorrect number of parameters found while Loading Line #%i. Expected 3 to 6 (Name, Source, Destination, [FuelFlowAt1PSI], [Volume], [GravityBasedFuelFlow]), got %i FuelFlowAt1PSI GravityBasedFuelFlow
+[FuelSystem]Line #%i invalid. Source component name is invalid. Ignoring.
+[FuelSystem]Line #%i invalid. Destination component id or type is invalid. Ignoring.
+[FuelSystem]Line #%i invalid. Pipe Fuel Rate at 1 PSI cannot be <= 0. Ignoring.
+[FuelSystem]Line #%i invalid. Pipe Volume cannot be <= 0. Ignoring. DestinationLine OpeningTime Circuit
+# [FuelSystem]Valve #%i invalid. Opening Time is invalid. Ignoring.
+# [FuelSystem]Incorrect number of parameters found while Loading Pump #%i. Expected 4 to 6 (Name, Pressure, DestinationLine, Type, [Index], [AutoCondition]), got %i Pressure EngineDriven APUDriven Anemometer AutoCondition
+[FuelSystem]Pump #%i invalid. DestinationLine is invalid. Ignoring.
+[FuelSystem]Pump #%i invalid. Pressure has to be > 0. Ignoring.
+[FuelSystem]Pump #%i invalid. Type has to be set. Ignoring.
+[FuelSystem]Pump #%i invalid. Type requires an index to be set to a value >0. Ignoring.
+[FuelSystem]Incorrect number of parameters found while Loading Trigger #%i. Expected 2 to 9 (Name, Condition, [Target], [Threshold], [EffectTrue], [EffectFalse], [DelayTrue], [DelayFalse]), got %i Threshold DelayTrue DelayFalse TankQuantityBelow TankQuantityAbove Autostart_Enabled Autoshutdown_Enabled TankImbalanceAbove TankImbalanceBelow EffectTrue EffectFalse OpenValve CloseValve StartPump StopPump SetJunction StartTrigger StopTrigger
+[FuelSystem]Effect #%i on Trigger #%i invalid. Triggers of Type SetJunction require a parameter : "SetJunction.NameOfJunction.IndexOfSetting". Ignoring.
+[FuelSystem]Effect #%i on Trigger #%i invalid. Type is incorrect. Ignoring.
+[FuelSystem]Effect #%i on Trigger #%i invalid. Too few parameters : (Valve/Pump/Junction, Index, [Param]). Ignoring.
+[FuelSystem]Trigger #%i invalid. Condition is Incorrect. Ignoring.
+[FuelSystem]Trigger #%i invalid. No valid effect defined. Ignoring
